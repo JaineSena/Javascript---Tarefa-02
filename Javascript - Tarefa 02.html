@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculo de Media Ponderada</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <script>
+    function calcularMediaPonderada() {
+      // Obter os valores digitados pelo usuário
+      var nota1 = parseFloat(document.getElementById("nota1").value);
+      var peso1 = parseFloat(document.getElementById("peso1").value);
+      var nota2 = parseFloat(document.getElementById("nota2").value);
+      var peso2 = parseFloat(document.getElementById("peso2").value);
+      var nota3 = parseFloat(document.getElementById("nota3").value);
+      var peso3 = parseFloat(document.getElementById("peso3").value);
+
+      // Calcular a média ponderada
+      var mediaPonderada = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+
+      // Exibir o resultado em um alerta
+      alert("A média ponderada é: " + mediaPonderada);
+    }
+  </script>
+</head>
+<body>
+  <h1>Cálculo de Média Ponderada</h1>
+  <label for="nota1">Nota 1:</label>
+  <input type="number" id="nota1"><br>
+  <label for="peso1">Peso 1:</label>
+  <input type="number" id="peso1"><br>
+  <label for="nota2">Nota 2:</label>
+  <input type="number" id="nota2"><br>
+  <label for="peso2">Peso 2:</label>
+  <input type="number" id="peso2"><br>
+  <label for="nota3">Nota 3:</label>
+  <input type="number" id="nota3"><br>
+  <label for="peso3">Peso 3:</label>
+  <input type="number" id="peso3"><br>
+  <button onclick="calcularMediaPonderada()">Calcular</button>
+</body>
+</html>
